@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Hatim - Gamer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    @keyframes pulse-glow {
+      0% { box-shadow: 0 0 5px #00ffff; }
+      50% { box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
+      100% { box-shadow: 0 0 5px #00ffff; }
+    }
+    @keyframes slideInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .section {
+      animation: slideInUp 1.5s ease forwards;
+      opacity: 0;
+    }
+    .section.visible {
+      opacity: 1;
+    }
+    .intro-btn:hover {
+      animation: pulse-glow 1s infinite;
+    }
+    .tagline {
+      overflow: hidden;
+      border-right: 0.15em solid #00ffff;
+      white-space: nowrap;
+      width: 0;
+      animation: typewriter 3s steps(30, end) 1s 1 normal both, blink 0.75s step-end infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <img src="media/Animation.gif" alt="Loading..." class="loading-logo" />
+    <p class="loading-text">Booting into Portfolio...</p>
+  </div>
+
+  <!-- Background overlay -->
+  <div class="background-overlay"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">🎮 AdamHatim</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Academy&Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="toggleTheme" class="toggle-theme">🌓 Toggle Theme</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <h1>Welcome to My Portfolio</h1>
+    <p class="tagline">Web Dev | Gamer | Tech Wizard</p>
+    <button class="intro-btn" onclick="playIntro()">▶ Play Intro</button>
+  </section>
+
+  <!-- About Section -->
+<section id="about" class="section" style="background: linear-gradient(135deg, #0d1a26, #1a1a2e); border: 1px solid var(--neon-pink); box-shadow: 0 0 20px var(--neon-pink); border-radius: 12px; margin-bottom: 3rem;">
+  <h2 style="color: var(--neon-blue); text-align: center;">About Me</h2>
+    <div id="content-container">
+      <div id="main">
+        <h3>Adam Hatim Bin Rozilan</h3>
+        <p>
+          I'm 20 years old, graduated from University Technical Malaysia Melaka with a
+          <strong>Bachelor Degree in Information Technology (Networking)</strong>.
+          My expertise lies in networking technologies such as VLAN, trunking, DHCP,
+          and routing protocols. I am certified with <strong>CCNA Routing & Switching</strong>.
+        </p>
+        <p>
+          I also have foundational skills in Windows Server, C++, Java, and web development.
+          I’m passionate about tech, love exploring new tools, and always aim to expand my skill set.
+        </p>
+      </div>
+      <div id="side">
+        <img src="image/imgsaya.jpeg" alt="Adam Hatim Profile" class="profile-pic" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+ <section id="skills" class="section" style="background: linear-gradient(135deg, #0d1a26, #1a1a2e); border: 1px solid var(--neon-pink); box-shadow: 0 0 20px var(--neon-pink); border-radius: 12px; margin-bottom: 3rem;">
+  <h2 style="color: var(--neon-green); text-align: center;">My Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">HTML5</span>
+      <span class="skill-tag">CSS3</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">Game UI Design</span>
+      <span class="skill-tag">Git & GitHub</span>
+      <span class="skill-tag">PHP & MySQL</span>
+      <span class="skill-tag">C++ / Java</span>
+      <span class="skill-tag">Windows Server</span>
+      <span class="skill-tag">Cisco Packet Tracer</span>
+    </div>
+  </section>
+
+<!-- Academy -->
+<section id="academy" class="section" style="background: linear-gradient(135deg, #0d1a26, #1a1a2e); border: 1px solid var(--neon-pink); box-shadow: 0 0 20px var(--neon-pink); border-radius: 12px;">
+<div id="content-container">
+    <div id="main">
+        <h2 style="color: var(--neon-green); text-align: center;">Academy</h2>
+            <table border="1">
+                <tr>
+                    <th>Location</th>
+                    <th>Activies</th>
+                    <th>Achievement</th>
+                </tr>
+                <tr>
+                    <td>Universiti Islam Selangor</td>
+                    <td>
+                        <ul>
+                            <li>Join member of matriculation association </li>
+                            <li>Join member of The Makers Club (Study IOT)</li>
+                            <li>Attended Usrah Perdana </li>
+                        </ul>
+                    </td>
+                    <td>Best Academic Recruits (22 July 2018)</td>
+                </tr>
+                <tr>
+                    <td>Sekolah Menengah Islam (SMI) Seremban</td>
+                    <td>
+                        <ul>
+                            <li>School resource center chairperson</li>
+                            <li>Active in chess club cocuriculum (MSSN CATUR PERINGKAT NEGERI)</li>
+                        </ul>
+                    </td>
+                    <td>Cooperator Awards (2018, 2021)</td>
+                </tr>
+            </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card"><h3>🎮 Game Profile UI</h3><p>Gaming-inspired interface using neon retro theme.</p></div>
+      <div class="project-card"><h3>🌐 Terminal Dashboard</h3><p>Hacker-themed JS portfolio with CLI-style interaction.</p></div>
+      <div class="project-card"><h3>🛡️ Cisco Network Simulation</h3><p>Full LAN config with VLANs, DHCP, RIP in Packet Tracer.</p></div>
+      <div class="project-card"><h3>🖥️ Asset Management System</h3><p>PHP/MySQL app with role-based access and asset tracking.</p></div>
+      <div class="project-card"><h3>📊 Student Result Portal</h3><p>Admin-grade platform for grade tracking using PHP/JS.</p></div>
+      <div class="project-card"><h3>🌍 UTeM Campus Navigator</h3><p>UX prototype guiding students using Google Maps API.</p></div>
+      <div class="project-card"><h3>🧠 Resume Generator</h3><p>JS-based tool to create PDFs from form inputs instantly.</p></div>
+      <div class="project-card"><h3>💻 Portfolio System v2.0</h3><p>CMS-powered portfolio with dark/light theme & admin UI.</p></div>
+      <div class="project-card"><h3>📡 Java Ping Monitor CLI</h3><p>CLI tool to ping servers and auto-alert on downtime.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <div class="contact-grid">
+      <p><strong>Email:</strong> adamhatim050819@gmail.com</p>
+      <p><strong>Discord:</strong> Atimm#1234</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Atimm01" target="_blank">github.com/Atimm01</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Adam Hatim - Cyber Portfolio</p>
+    <p>🔐 Built with neon vibes and endless passion</p>
+  </footer>
+
+  <script>
+    let introAudio;
+    let isPlaying = false;
+
+    function playIntro() {
+      const button = document.querySelector(".intro-btn");
+
+      if (!introAudio) {
+        introAudio = new Audio("media/intro.mp3");
+        introAudio.volume = 0.8;
+      }
+
+      if (isPlaying) {
+        introAudio.pause();
+        button.textContent = "▶ Play Intro";
+      } else {
+        introAudio.play();
+        button.textContent = "⏸ Pause Intro";
+      }
+
+      isPlaying = !isPlaying;
+
+      introAudio.onended = () => {
+        button.textContent = "▶ Play Intro";
+        isPlaying = false;
+      };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".section");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.2 });
+
+      sections.forEach(section => observer.observe(section));
+
+      const toggleBtn = document.getElementById("toggleTheme");
+      toggleBtn?.addEventListener("click", () => {
+        document.body.classList.toggle("light-theme");
+      });
+
+      const loadingScreen = document.getElementById("loadingScreen");
+      setTimeout(() => loadingScreen.classList.add("hidden"), 2000);
+    });
+  </script>
+</body>
+</html>
